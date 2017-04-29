@@ -42,7 +42,6 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate,GMSMapView
         status.text = ""
         logout.title = ("Logout: " + login_with)
        
-    
         let camera = GMSCameraPosition.camera(withLatitude: 18.705581, longitude:  98.982084, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: self.googleMapview.bounds, camera: camera)
         self.googleMapview.addSubview(mapView)
@@ -53,7 +52,9 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate,GMSMapView
             let when = DispatchTime.now() + 2
             DispatchQueue.main.asyncAfter(deadline: when) {
             self.markPoint()
+            self.status.text = "Press the marker for show location"
             }
+         
         }
 
         // Do any additional setup after loading the view.
@@ -291,7 +292,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate,GMSMapView
         return true
     }
     
-    }
+}
 
 
     
