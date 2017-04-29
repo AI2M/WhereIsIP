@@ -1,0 +1,6 @@
+framework module Pods_WhereIsIP {
+  umbrella header "Pods-WhereIsIP-umbrella.h"
+
+  export *
+  module * { export * }
+}
